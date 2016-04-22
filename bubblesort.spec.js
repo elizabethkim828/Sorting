@@ -32,11 +32,11 @@ describe('Swap', function () {
         swap(arr, 2);
         expect(arr).toEqual([3, 2, 1, 4, 8]);
     });
-    // it("throws an error if you give it an index higher than the penultimate element", function () {
-    //     expect(function () {
-    //         swap([1, 2, 3], 2);
-    //     }).toThrow();
-    // });
+    it("throws an error if you give it an index higher than the penultimate element", function () {
+        expect(function () {
+            swap([1, 2, 3], 2);
+        }).toThrow();
+    });
 });
 
 describe('Compare', function () {

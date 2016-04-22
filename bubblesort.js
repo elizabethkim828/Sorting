@@ -1,7 +1,7 @@
 function bubbleSort(array, i) {
 	i = i || 1; // this is so that we can keep track of the number of "last elements" we no longer need to compare
 	
-	if (array.length < 1) return array;
+	if (array.length <= 1) return array;
 
 	var compareNum = 0, swapNum = 0;
 	
@@ -22,6 +22,7 @@ function bubbleSort(array, i) {
 }
 
 function swap(arr, i) {
+	if (!arr[i+1]) throw new Error('Not enough elements');
 	i = i || 0;
 	var temp = arr[i];
 	arr[i] = arr[i+1];
